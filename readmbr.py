@@ -20,13 +20,13 @@ def checkMbr():
     h = m.digest()
 
     coolHash = b'4f198add422223d6a067f7cbdf3a99e28fbae4c6926112cc0a5449e8d9c8da12'
-    h = b'123'
+
     if h == unhexlify(coolHash):
         print("Everything's OK")
     else:
         message = ("Evil Maid attack is detected!\n\n"
         "Original MBR hash is: \n{0} \n\n"
-        "Current MBR hash is: \n{1}").format(coolHash[2:-1], h[2:-1])
+        "Current MBR hash is: \n{1}").format(str(coolHash)[2:-1], str(hexlify(h))[2:-1])
 
         
         warn = WarningWindow(message)

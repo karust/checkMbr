@@ -9,7 +9,7 @@ class WarningWindow(QMainWindow):
     def __init__(self, error = "Some error"):
         QMainWindow.__init__(self)
 
-        self.setMinimumSize(QSize(40, 200))    
+        self.setFixedSize(QSize(400, 200))    
         self.setWindowTitle("Warning") 
 
         alert = QLabel(error, self)

@@ -6,8 +6,8 @@ import socket
 from readmbr import checkMbr
 
 class AppServerSvc (win32serviceutil.ServiceFramework):
-    _svc_name_ = "TestService"
-    _svc_display_name_ = "Test Service"
+    _svc_name_ = "Evil Maid Check Service"
+    _svc_display_name_ = "Evil Maid Check Service"
 
     def __init__(self,args):
         win32serviceutil.ServiceFramework.__init__(self,args)
